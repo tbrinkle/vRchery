@@ -1,0 +1,33 @@
+ManifestFileVersion: 0
+CRC: 879508070
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1fea9ce03ee205e546672c8cf3c273cb
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 166ccc02b23b388be49378fccb1ac3fe
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 89
+  Script: {instanceID: 0}
+Assets:
+- Assets/Environment/Cloud/PlatformMat.mat
+- Assets/Environment/Wispy Sky/Materials/Materials/WispyCubemap2.mat
+- Assets/Oculus/VR/Meshes/OculusTouchForRift/Materials/OculusTouchForRift_Material.mat
+- Assets/Oculus/VR/Materials/GearVrController/GearVrControllerMat_128.mat
+- Assets/Downloaded Assets/Cartoon_Weapon_Pack/Material/Weapons.mat
+- Assets/Oculus/VR/Meshes/OculusGoController/Materials/OculusGoControllerMat.mat
+- Assets/Oculus/VR/Meshes/OculusTouchForQuestAndRiftS/Materials/OculusTouchForQuestAndRiftS_Material.mat
+- Assets/Oculus/VR/Meshes/GearVrController/Materials/malibuController_color_1024.mat
+Dependencies:
+- C:/Users/maxge/Documents/Unity/vRchery/OVRAssetBundles/OVRMasterBundle/asset_png0
+- C:/Users/maxge/Documents/Unity/vRchery/OVRAssetBundles/OVRMasterBundle/asset_tif0
+- C:/Users/maxge/Documents/Unity/vRchery/OVRAssetBundles/OVRMasterBundle/asset_tga0
+- C:/Users/maxge/Documents/Unity/vRchery/OVRAssetBundles/OVRMasterBundle/asset_cubemap0

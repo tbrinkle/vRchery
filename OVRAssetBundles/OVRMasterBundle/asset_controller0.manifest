@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 2364706780
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 626443e608f031218e5c5b6c4e552966
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: fdf6c57a251b9f6ec27bdd2fe01b033c
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+Assets:
+- Assets/Downloaded Assets/_BowAndArrow/Animation/BowController.controller
+Dependencies:
+- C:/Users/maxge/Documents/Unity/vRchery/OVRAssetBundles/OVRMasterBundle/asset_fbx0

@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 1892430553
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 737b5a5cb8c6a42dab92cbcd2c6a84da
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9f7a8bc794068968cebc4add383d9e5e
+HashAppended: 0
+ClassTypes:
+- Class: 89
+  Script: {instanceID: 0}
+Assets:
+- Assets/Environment/Wispy Sky/Materials/WispyCubemap2.cubemap
+Dependencies: []

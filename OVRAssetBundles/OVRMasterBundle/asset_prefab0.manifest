@@ -1,0 +1,64 @@
+ManifestFileVersion: 0
+CRC: 1621357493
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4a271d4545482356cf60508919f4d033
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 865d3d9a9166e4e4333a9e68590a3816
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 81
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: df9f338034892c44ebb62d97894772f1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7e933e81d3c20c74ea6fdc708a67e3a5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: aed62bf3ae2456c408f247f96808ce96, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5178bc8574ce2bf4388e787a2e2af326, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5d151c0c769ed8a4981d04e3bcd0a91d, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b30c236184e65cb469ea8eaaa1b526c8, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+Assets:
+- Assets/Downloaded Assets/_BowAndArrow/Prefabs/Bow.prefab
+- Assets/Oculus/VR/Prefabs/OVRCameraRig.prefab
+- Assets/Oculus/VR/Prefabs/OVRControllerPrefab.prefab
+- Assets/Downloaded Assets/_BowAndArrow/Prefabs/Arrow.prefab
+Dependencies:
+- C:/Users/maxge/Documents/Unity/vRchery/OVRAssetBundles/OVRMasterBundle/asset_fbx0
+- C:/Users/maxge/Documents/Unity/vRchery/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- C:/Users/maxge/Documents/Unity/vRchery/OVRAssetBundles/OVRMasterBundle/asset_controller0
