@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2101698761
+CRC: 3027903717
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: fff53d338df623fe7c02c9041ec17ce5
+    Hash: 319adf968f7232b71c56790c81f54149
   TypeTreeHash:
     serializedVersion: 2
     Hash: 2ed26e3ad9f6be9c24f85f5f5b54339d
@@ -12,6 +12,5 @@ ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
 Assets:
-- Assets/Oculus/VR/Textures/OculusTouchForRift/touchController_albedo.png
 - Assets/Downloaded Assets/Cartoon_Weapon_Pack/Textures/Weapons.png
 Dependencies: []

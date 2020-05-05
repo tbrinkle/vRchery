@@ -16,6 +16,11 @@ public class Arrow : MonoBehaviour
         m_Rigidbody = GetComponent<Rigidbody>();
     }
 
+    private void Start()
+    {
+        m_LastPosition = transform.position;
+    }
+
     private void FixedUpdate()
     {
         if (m_IsStopped)
@@ -25,24 +30,48 @@ public class Arrow : MonoBehaviour
 
         m_Rigidbody.MoveRotation(Quaternion.LookRotation(m_Rigidbody.velocity, transform.up));
 
-        if (Physics.Linecast(m_LastPosition, m_Tip.position))
+
+        RaycastHit hit;
+        if (Physics.Linecast(m_LastPosition, m_Tip.position, out hit))
         {
-            Stop();
+            Stop(hit.collider.gameObject);
         }
 
         m_LastPosition = m_Tip.position;
     }
 
-    private void Stop()
+    private void Stop(GameObject hitObject)
     {
         m_IsStopped = true;
 
+        transform.parent = hitObject.transform;
+
         m_Rigidbody.isKinematic = true;
         m_Rigidbody.useGravity = false;
+
+        CheckForDamage(hitObject);
+    }
+
+    private void CheckForDamage(GameObject hitObject)
+    {
+        MonoBehaviour[] behaviours = hitObject.GetComponents<MonoBehaviour>();
+
+        foreach (MonoBehaviour behaviour in behaviours)
+        {
+            if (behaviour is IDamageable)
+            {
+                IDamageable damageable = (IDamageable)behaviour;
+                damageable.Damage(10);
+
+                break;
+            }
+        }
     }
 
     public void Fire(float pullValue)
     {
+        m_LastPosition = transform.position;
+
         m_IsStopped = false;
         transform.parent = null;
 
@@ -52,4 +81,5 @@ public class Arrow : MonoBehaviour
 
         Destroy(gameObject, 5);
     }
+
 }

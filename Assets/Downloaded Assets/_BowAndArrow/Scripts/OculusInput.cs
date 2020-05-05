@@ -18,5 +18,4 @@ public class OculusInput : MonoBehaviour
         if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger, m_Controller))
             m_Bow.Release();
     }
-
 }
