@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace OSVR.UI
 {
@@ -13,7 +14,7 @@ namespace OSVR.UI
         /// <summary>
         /// Text object that the script will modify
         /// </summary>
-        public Text text;
+        public TMP_InputField nameInputField;
         /// <summary>
         /// User specifies character that the key will input
         /// </summary>
@@ -45,13 +46,13 @@ namespace OSVR.UI
                 switch (TextType)
                 {
                     case Text_Type.Backspace:
-                        text.text = text.text.Substring(0, text.text.Length - 1);
+                        nameInputField.text = nameInputField.text.Substring(0, nameInputField.text.Length - 1);
                         break;
                     case Text_Type.Enter:
-                        text.text += "\r\n";
+                        nameInputField.text += "\r\n";
                         break;
                     default:
-                        text.text += key;
+                        nameInputField.text += key;
                         break;
                 }
                 timer = Time.time;
