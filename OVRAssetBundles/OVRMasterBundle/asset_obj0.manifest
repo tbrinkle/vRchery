@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3299877741
+CRC: 2714962422
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 34e39b9766bc6993eb1ecc8f7242f36c
+    Hash: 3c554fcf117bb91a9418c35cc0c0477d
   TypeTreeHash:
     serializedVersion: 2
     Hash: ae2cf77de671e115b4e55d2b65767202
@@ -25,4 +25,5 @@ ClassTypes:
   Script: {instanceID: 0}
 Assets:
 - Assets/Environment/Cloud/cloud_02.obj
+- Assets/Environment/Target/model.obj
 Dependencies: []

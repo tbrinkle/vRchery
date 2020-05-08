@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 737913962
+CRC: 2216348401
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f732107ac592720523a2a7c7b3efd73b
+    Hash: 630ae1d2aa9c9eae8570b9b14282ccf3
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 3c831659204dc4c5bde96d5c5f627bb7
+    Hash: 0fe1b010b9030167a391c488c0c95614
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -23,6 +23,8 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
 - Class: 74
   Script: {instanceID: 0}
 - Class: 90
@@ -32,6 +34,16 @@ ClassTypes:
 - Class: 137
   Script: {instanceID: 0}
 Assets:
+- Assets/Oculus/VR/Meshes/OculusTouchForQuestAndRiftS/OculusTouchForQuestAndRiftS_Right.fbx
+- Assets/Downloaded Assets/Poly/Geom Art Pack vol. 2/Models[-]Prefabs/cloud_1.fbx
+- Assets/Oculus/VR/Meshes/GearVrController/GearVrController.fbx
 - Assets/Downloaded Assets/_BowAndArrow/Meshes/SM_Arrow.fbx
+- Assets/Downloaded Assets/Poly/Geom Art Pack vol. 2/Models[-]Prefabs/cloud_3.fbx
+- Assets/Downloaded Assets/Poly/Geom Art Pack vol. 2/Models[-]Prefabs/cloud_2.fbx
+- Assets/Oculus/VR/Meshes/OculusTouchForRift/left_touch_controller_model_skel.fbx
 - Assets/Downloaded Assets/_BowAndArrow/Meshes/SM_Bow.fbx
-Dependencies: []
+- Assets/Oculus/VR/Meshes/OculusTouchForQuestAndRiftS/OculusTouchForQuestAndRiftS_Left.fbx
+- Assets/Oculus/VR/Meshes/OculusTouchForRift/right_touch_controller_model_skel.fbx
+- Assets/Oculus/VR/Meshes/OculusGoController/OculusGoController.fbx
+Dependencies:
+- C:/Users/maxge/Documents/Unity/vRchery/OVRAssetBundles/OVRMasterBundle/asset_mat0

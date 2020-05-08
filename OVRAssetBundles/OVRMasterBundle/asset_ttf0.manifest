@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3318572193
+CRC: 353998876
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: e9516aa2794955c8e6cb23c4b367a8d8
+    Hash: 985061ecc5b50c91dedeb14e7e26e1b2
   TypeTreeHash:
     serializedVersion: 2
     Hash: 44912aa95bf28c03affddc6817be15fe
@@ -19,5 +19,5 @@ ClassTypes:
   Script: {instanceID: 0}
 Assets:
 - Assets/TextMesh Pro/Fonts/LiberationSans.ttf
-- Assets/TextMesh Pro/Examples & Extras/Fonts/Roboto-Bold.ttf
+- Assets/Oculus/SampleFramework/Core/DebugUI/Fonts/Montserrat/Montserrat-Bold.ttf
 Dependencies: []

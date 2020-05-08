@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Target : MonoBehaviour, IDamageable
 {
-    public  delegate void TargetHit();
+    public  delegate void TargetHit(GameObject target);
     public static TargetHit OnTargetHit;
     
     public void Damage(int amount)
     {
-        OnTargetHit.Invoke();
+        OnTargetHit.Invoke(gameObject);
         TurnRed();
         Destroy(gameObject, 0.5f);
     }

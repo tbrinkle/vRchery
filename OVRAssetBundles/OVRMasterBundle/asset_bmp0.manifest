@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1986487890
+CRC: 2905002719
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 5693c65968c7f4f5b46a53a4bc8ac33c
+    Hash: 89fdf5e9ba9340e880c241f030b8534d
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9e6ad29cbd2df8fbe1a15315db0e51ab
@@ -14,6 +14,7 @@ ClassTypes:
 - Class: 213
   Script: {instanceID: 0}
 Assets:
+- Assets/UI/Images/vRchery.bmp
 - Assets/UI/Images/ArrowImage.bmp
 - Assets/UI/Images/CloudImage.bmp
 Dependencies: []

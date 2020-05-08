@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 4064839528
+CRC: 285419450
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 53123f1b4b7b4b0e72c805cd8d959866
+    Hash: a8a80b9b65196737fbe77a12fcd20847
   TypeTreeHash:
     serializedVersion: 2
     Hash: 2ed26e3ad9f6be9c24f85f5f5b54339d
@@ -12,5 +12,13 @@ ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
 Assets:
+- Assets/Environment/Wispy Sky/Textures/SkyBox020002.tif
+- Assets/Environment/Wispy Sky/Textures/SkyBox020005.tif
+- Assets/Environment/Wispy Sky/Textures/SkyBox020003.tif
+- Assets/Environment/Wispy Sky/Textures/SkyBox020006.tif
+- Assets/Oculus/VR/Textures/GearVrController/GearVrController_color_128.tif
+- Assets/Oculus/VR/Textures/GearVrController/GearVrController_ao_128.tif
+- Assets/Oculus/VR/Textures/GearVrController/GearVrController_normal_128.tif
+- Assets/Environment/Wispy Sky/Textures/SkyBox020004.tif
 - Assets/Environment/Wispy Sky/Textures/SkyBox020001.tif
 Dependencies: []
