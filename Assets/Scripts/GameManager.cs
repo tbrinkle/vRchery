@@ -44,4 +44,10 @@ public class GameManager : MonoBehaviour
     {
         Target.OnTargetHit -= TargetHit;
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
 }

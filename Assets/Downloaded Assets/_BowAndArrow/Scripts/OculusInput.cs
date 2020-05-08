@@ -10,8 +10,8 @@ public class OculusInput : MonoBehaviour
     public GameObject m_OppositeController;
     public OVRInput.Controller m_Controller = OVRInput.Controller.None;
     public GameObject leftController;
-
-    private bool menuButtonToggle;
+    public Transform canvas;
+    public Transform UIHelpers;
 
     private void Update()
     {
@@ -21,11 +21,21 @@ public class OculusInput : MonoBehaviour
         if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger, m_Controller))
             m_Bow.Release();
 
-        /* if (OVRInput.GetDown(OVRInput.Button.Start))
-            menuButtonToggle = true;
+        if (OVRInput.GetDown(OVRInput.Button.Start) || Input.GetKeyDown(KeyCode.Escape))
+            displayPauseMenu();
 
-        if (menuButtonToggle == true) */
+    }
 
-
+    public void displayPauseMenu()
+    {
+        if (canvas.gameObject.activeInHierarchy == false)
+        {
+            canvas.gameObject.SetActive(true);
+            UIHelpers.gameObject.SetActive(true);
+        } else
+        {
+            canvas.gameObject.SetActive(false);
+            UIHelpers.gameObject.SetActive(false);
+        }
     }
 }
