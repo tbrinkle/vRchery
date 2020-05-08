@@ -3,6 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.IO;
+using Newtonsoft.Json;
+
+
+public class PlayerData
+{
+    public string name { get; set; }
+    public int score { get; set; }
+    public string date { get; set; }
+}
+
 
 public class PlayerManager : MonoBehaviour
 {
@@ -10,7 +21,7 @@ public class PlayerManager : MonoBehaviour
     public TMP_InputField nameInputField;
     public string playerName;
     public int playerScore;
-    //public float playTime;
+    private string _PlayerJsonData;
 
     void Awake() {
          DontDestroyOnLoad (this);
@@ -21,11 +32,6 @@ public class PlayerManager : MonoBehaviour
         playerScore = 0;
 
         nameInputField.onValueChanged.AddListener(delegate {setPlayerName(); });
-    }
-
-    void Update()
-    {
-        
     }
 
     public void setPlayerName() {
@@ -42,6 +48,23 @@ public class PlayerManager : MonoBehaviour
 
     public int getPlayerScore() {
         return playerScore;
+    }
+
+    public void serializePlayer() {
+        var playerData = new PlayerData()
+         {
+            name = getPlayerName(),
+            score = getPlayerScore(),
+            date = System.DateTime.Now.ToString("MM/dd/yyyy")
+        };
+
+         _PlayerJsonData = JsonConvert.SerializeObject(playerData);     
+    }
+
+
+    public void savePlayerJson() {
+        var filePath = Path.Combine(Application.persistentDataPath, "PlayerData.dat");  
+        File.AppendAllText(filePath, _PlayerJsonData);
     }
 
 }
