@@ -70,6 +70,7 @@ public class Arrow : MonoBehaviour
 
     public void Fire(float pullValue)
     {
+        ArrowWoosh.playSound();
         m_LastPosition = transform.position;
 
         m_IsStopped = false;
