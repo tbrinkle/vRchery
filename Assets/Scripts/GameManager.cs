@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
 
     public GameObject m_TargetPrefab;
+    public GameObject ourCameraRig;
 
     private int score = 0;
     public int targets;
@@ -20,7 +21,9 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < targets; i++)
         {
             Vector3 loc = new Vector3(Random.Range(-30, 30), Random.Range(-5, 10), Random.Range(-30, 30));
-            Instantiate(m_TargetPrefab, loc, Quaternion.identity);
+            GameObject newTarget = Instantiate(m_TargetPrefab, loc, Quaternion.identity);
+            newTarget.transform.LookAt(ourCameraRig.transform);
+
         }
 
         yield return null;
