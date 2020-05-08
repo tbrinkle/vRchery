@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject m_TargetPrefab;
     public GameObject ourCameraRig;
     public GameObject gameModes;
+    public GameObject scoreObject;
 
     public delegate void GameOver();
     public static GameOver OnGameOver;
@@ -18,21 +19,45 @@ public class GameManager : MonoBehaviour
     private float time;
     public TextMeshProUGUI timer;
     public TextMeshProUGUI remaining;
+    public TextMeshProUGUI scoreNum;
 
 
     private void Update()
     {
-        time -= Time.deltaTime;
-        timer.SetText(time.ToString());
         if (time <= 0)
         {
-            timer.SetText(score.ToString());
+            scoreObject.SetActive(true);
+            scoreNum.SetText(score.ToString());
+            gameModes.SetActive(true);
             OnGameOver.Invoke();
         }
+        else
+        {
+            time -= Time.deltaTime;
+            timer.SetText(((int)time).ToString());
+        }        
+    }
+
+    private IEnumerator ClearGame()
+    {
+        GameObject[] targets = GameObject.FindGameObjectsWithTag("Target");
+
+        foreach (GameObject t in targets)
+        {
+            Destroy(t);
+        }
+
+        yield return null;
     }
 
     private IEnumerator SetupGame(int targets, float time, int maxRange)
     {
+        StartCoroutine(ClearGame());
+
+        gameModes.SetActive(false);
+        scoreObject.SetActive(false);
+        score = 0;
+
         for (int i = 0; i < targets; i++)
         {
             Vector3 loc = new Vector3(Random.Range(-maxRange, maxRange), Random.Range(-5, 10), Random.Range(-maxRange, maxRange));
@@ -40,6 +65,7 @@ public class GameManager : MonoBehaviour
             newTarget.transform.LookAt(ourCameraRig.transform);
         }
 
+        remaining.SetText(targets.ToString());
         timer.SetText(time.ToString());
 
         yield return null;
@@ -77,17 +103,14 @@ public class GameManager : MonoBehaviour
     {
         if (hit.tag == "Easy")
         {
-            gameModes.SetActive(false);
             Easy();
         }
         else if (hit.tag == "Medium")
         {
-            gameModes.SetActive(false);
             Medium();
         }
         else if (hit.tag == "Hard")
         {
-            gameModes.SetActive(false);
             Hard();
         }
         else

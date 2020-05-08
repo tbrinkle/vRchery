@@ -10,8 +10,11 @@ public class Target : MonoBehaviour, IDamageable
     public void Damage(int amount)
     {
         OnTargetHit.Invoke(gameObject);
-        TurnRed();
-        Destroy(gameObject, 0.5f);
+        if (gameObject.tag == "Target")
+        {
+            TurnRed();
+            Destroy(gameObject, 0.5f);
+        }
     }
 
     private void TurnRed()
