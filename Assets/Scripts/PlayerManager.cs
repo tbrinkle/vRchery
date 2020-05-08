@@ -66,5 +66,4 @@ public class PlayerManager : MonoBehaviour
         var filePath = Path.Combine(Application.persistentDataPath, "PlayerData.dat");  
         File.AppendAllText(filePath, _PlayerJsonData);
     }
-
 }
