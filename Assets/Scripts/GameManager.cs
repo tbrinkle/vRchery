@@ -21,15 +21,12 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI remaining;
     public TextMeshProUGUI scoreNum;
 
-    private void Awake()
-    {
-        Hard();
-    }
 
     private void Update()
     {
         if (time <= 0)
         {
+            StartCoroutine(ClearGame());
             scoreObject.SetActive(true);
             scoreNum.SetText(score.ToString());
             gameModes.SetActive(true);
@@ -67,8 +64,6 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator SetupGame(int targets, float time, int maxRange)
     {
-        StartCoroutine(ClearGame());
-
         gameModes.SetActive(false);
         scoreObject.SetActive(false);
         score = 0;

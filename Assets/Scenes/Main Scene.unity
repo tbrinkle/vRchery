@@ -3173,7 +3173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 847d8b0d968d4a14c89d7508f54c0db7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnableLinearMovement: 1
+  EnableLinearMovement: 0
   EnableRotation: 1
   HMDRotatesPlayer: 0
   RotationEitherThumbstick: 0
