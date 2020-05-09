@@ -6,6 +6,8 @@ using TMPro;
 
 public class PlayerManager : MonoBehaviour
 {
+
+    //public GameObject keyboard;
     
     public TMP_InputField nameInputField;
     public string playerName;
@@ -29,6 +31,7 @@ public class PlayerManager : MonoBehaviour
     }
 
     public void setPlayerName() {
+        //keyboard.SetActive(true);
         playerName = nameInputField.text;
     }
 

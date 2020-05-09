@@ -21,6 +21,10 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI remaining;
     public TextMeshProUGUI scoreNum;
 
+    private void Awake()
+    {
+        Hard();
+    }
 
     private void Update()
     {
@@ -50,6 +54,17 @@ public class GameManager : MonoBehaviour
         yield return null;
     }
 
+    private Vector3 CheckLocation(Vector3 loc, int maxRange)
+    {
+        Vector3 newLoc = loc;
+        while (newLoc.x < 10 && newLoc.x > -10 &&  newLoc.y < 10 && newLoc.y > -10)
+        {
+            newLoc = new Vector3(Random.Range(-maxRange, maxRange), Random.Range(-5, 20), Random.Range(-maxRange, maxRange));
+        }
+
+        return newLoc;
+    }
+
     private IEnumerator SetupGame(int targets, float time, int maxRange)
     {
         StartCoroutine(ClearGame());
@@ -60,9 +75,10 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < targets; i++)
         {
-            Vector3 loc = new Vector3(Random.Range(-maxRange, maxRange), Random.Range(-5, 10), Random.Range(-maxRange, maxRange));
-            GameObject newTarget = Instantiate(m_TargetPrefab, loc, Quaternion.identity);
+            Vector3 loc = new Vector3(Random.Range(-maxRange,maxRange), Random.Range(-5, 20), Random.Range(-maxRange, maxRange));
+            GameObject newTarget = Instantiate(m_TargetPrefab, CheckLocation(loc, maxRange), Quaternion.identity);
             newTarget.transform.LookAt(ourCameraRig.transform);
+            newTarget.transform.Rotate(0, 47, 0);
         }
 
         remaining.SetText(targets.ToString());
@@ -97,7 +113,6 @@ public class GameManager : MonoBehaviour
 
         StartCoroutine(SetupGame(targets, time, maxR));
     }
-
 
     private void TargetHit(GameObject hit)
     {
